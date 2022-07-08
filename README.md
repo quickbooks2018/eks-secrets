@@ -13,5 +13,11 @@ docker run --name nginx -id nginx:latest
 docker cp nginx:/docker-entrypoint.sh .
 ```
 
+- Docker Build
+
+```build
+docker build -t secrets .
+```
+
 
 
