@@ -16,8 +16,17 @@ docker cp nginx:/docker-entrypoint.sh .
 - Docker Build
 
 ```build
-docker build -t secrets .
+docker build -t quickbooks2018/eks-secrets:latest .
+```
+- Create a Deployment
+
+```
+kubectl create deployment <Deplyment-Name> --image=<Container-Image>
+kubectl create deployment secrets-deployment --image=quickbooks2018/eks-secrets:latest
 ```
 
+- Delete Deployment
 
-
+```
+kubectl delete deployment secrets-deployment
+```
