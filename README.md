@@ -7,11 +7,6 @@
 ```nginx
 docker run --name nginx -id nginx:latest
 ```
-- Docker Copy
-
-```copy
-docker cp nginx:/docker-entrypoint.sh .
-```
 
 - Docker Build
 
