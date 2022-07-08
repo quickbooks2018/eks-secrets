@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-COPY secret.sh /secret.sh
+COPY secrets.sh /secrets.sh
 
 RUN chmod +x /secret.sh
 
