@@ -2,9 +2,9 @@ FROM wordpress:latest
 
 RUN apt update -y && apt install -y awscli jq supervisor procps
 
-COPY secrets.sh /secrets.sh
+COPY secrets.sh /home/secrets.sh
 
-RUN chmod +x /secrets.sh
+RUN chmod +x /home/secrets.sh
 
 COPY supervisord.conf /etc/supervisord.conf
 
