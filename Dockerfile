@@ -6,6 +6,4 @@ COPY secrets.sh /secrets.sh
 
 RUN chmod +x /secrets.sh
 
-CMD ["bash","-c","nginx -g 'daemon off;'; source /secrets.sh"]
-
-
+ENTRYPOINT ["/bin/bash", "-c" , "/docker-entrypoint.sh && /secrets.sh"]
