@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-RUN apt update -y && apt install -y awscli jq supervisor
+RUN apt update -y && apt install -y awscli jq supervisor procps
 
 COPY secrets.sh /secrets.sh
 
