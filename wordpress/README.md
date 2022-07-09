@@ -19,3 +19,9 @@ docker run --name phpmyadmin --network=wordpress -e PMA_HOST=wordpress-instance-
 
 docker run --name wordpress --network wordpress -p 80:80 -id quickbooks2018/eks-wordpress:latest
 ```
+
+- docker-compose
+
+```wordpress
+docker compose -p wordpress up -d
+```
