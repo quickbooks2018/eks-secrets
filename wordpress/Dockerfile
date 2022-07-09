@@ -1,4 +1,4 @@
-FROM docker.io/bitnami/wordpress:latest
+FROM wordpress:latest
 
 RUN apt update -y && apt install -y awscli jq supervisor procps
 
