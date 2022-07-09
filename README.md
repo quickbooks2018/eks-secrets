@@ -44,3 +44,9 @@ kubectl create deployment secrets-deployment --image=quickbooks2018/eks-secrets:
 ```
 kubectl delete deployment secrets-deployment
 ```
+
+- Alpine Containers
+
+```bash
+apk update && apk add bash
+```
