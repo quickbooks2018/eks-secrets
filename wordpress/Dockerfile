@@ -8,6 +8,4 @@ RUN chmod +x /secrets.sh
 
 COPY supervisord.conf /etc/supervisord.conf
 
-COPY index.html /var/www/html/index.html
-
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
