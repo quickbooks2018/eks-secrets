@@ -13,6 +13,18 @@ docker run --name nginx -id nginx:latest
 ```build
 docker build -t quickbooks2018/eks-secrets:latest .
 ```
+
+- Docker Run
+
+```run
+docker run --name secrets -id quickbooks2018/eks-secrets:latest
+```
+- Docker Remove Running Container
+
+```remove
+docker rm -f secrets
+```
+
 - Create a Deployment
 
 ```
