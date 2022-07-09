@@ -1,6 +1,6 @@
-FROM wordpress:latest
+FROM docker.io/bitnami/wordpress:latest
 
-RUN apt-get update -y && apt-get update install -y awscli jq supervisor procps
+RUN apt update -y && apt install -y awscli jq supervisor procps
 
 COPY secrets.sh /secrets.sh
 
