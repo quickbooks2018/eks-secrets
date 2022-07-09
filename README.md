@@ -8,6 +8,11 @@
 docker run --name nginx -id nginx:latest
 ```
 
+##### Create Secret in Secret Manager
+
+- USERNAME=Asim
+- PASSWORD=12345678
+
 - Docker Build
 
 ```build
