@@ -35,3 +35,5 @@ docker compose -p wordpress up -d
 - https://stackoverflow.com/questions/1641477/how-to-set-environment-variable-for-everyone-under-my-linux-system
 
 - https://superuser.com/questions/1308298/setting-variable-in-etc-environment-has-no-effect
+
+- https://stackoverflow.com/questions/65593487/set-env-variables-for-all-the-users-is-not-working-in-docker
