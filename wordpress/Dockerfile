@@ -5,7 +5,7 @@ USER 0
 ## Install 'vim'
 RUN install_packages awscli jq supervisor procps
 
-COPY secrets.sh /etc/profile.d/secrets.sh
+COPY secrets.sh /secrets.sh
 
 RUN chmod +x /secrets.sh && chown 1001:1001 /etc/environment
 
