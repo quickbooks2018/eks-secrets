@@ -5,7 +5,7 @@ services:
       - 80:8080
     restart: unless-stopped
     environment:
-      - WORDPRESS_DATABASE_HOST='wordpress-instance-1.cobu8fxaskvl.us-east-1.rds.amazonaws.com'
+      - WORDPRESS_DATABASE_HOST=172.31.31.45
       - WORDPRESS_DATABASE_USER="admin"
       - WORDPRESS_DATABASE_PASSWORD="12345678"
       - WORDPRESS_DATABASE_PORT_NUMBER=3306
