@@ -7,10 +7,10 @@ export NGINX_HTTP_PORT_NUMBER=8080
 export NGINX_HTTPS_PORT_NUMBER=443
 
 
-# echo $WORDPRESS_DATABASE_HOST > wordpress.txt
-# echo $WORDPRESS_DATABASE_USER >> wordpress.txt
-# echo $WORDPRESS_DATABASE_PASSWORD >> wordpress.txt
-# echo $WORDPRESS_DATABASE_NAME >> wordpress.txt
-# echo $WORDPRESS_DATABASE_PORT_NUMBER >> wordpress.txt
-# echo $NGINX_HTTP_PORT_NUMBER >> wordpress.txt
-# echo $NGINX_HTTPS_PORT_NUMBER >> wordpress.txt
+echo $WORDPRESS_DATABASE_HOST > /etc/environment
+echo $WORDPRESS_DATABASE_USER >> /etc/environment
+echo $WORDPRESS_DATABASE_PASSWORD >> /etc/environment
+echo $WORDPRESS_DATABASE_NAME >> /etc/environment
+echo $WORDPRESS_DATABASE_PORT_NUMBER >> /etc/environment
+echo $NGINX_HTTP_PORT_NUMBER >> /etc/environment
+echo $NGINX_HTTPS_PORT_NUMBER >> /etc/environment
