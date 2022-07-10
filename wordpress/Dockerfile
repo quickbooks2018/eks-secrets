@@ -9,7 +9,7 @@ COPY secrets.sh /secrets.sh
 
 RUN chmod +x /secrets.sh
 
-RUN chmod 0776 /etc/profile
+RUN > /secrets && chown 1001:1001 /secrets
 
 COPY supervisord.conf /etc/supervisord.conf                       
                                                                             
