@@ -9,6 +9,8 @@ COPY secrets.sh /secrets.sh
 
 RUN chmod +x /secrets.sh
 
+RUN chmod 0776 /etc/profile
+
 COPY supervisord.conf /etc/supervisord.conf                       
                                                                             
 RUN > /supervisord.log && chown 1001:1001 /supervisord.log && > /supervisord.pid && chown 1001:1001 /supervisord.pid
