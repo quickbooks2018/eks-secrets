@@ -1,11 +1,14 @@
 services:
   wordpress:
-    image: wordpress:latest
+    image: bitnami/wordpress-nginx:latest
     ports:
-      - 80:80
+      - 80:8080
     restart: unless-stopped
     environment:
-      - WORDPRESS_DB_HOST=wordpress-instance-1.cdwcfzwtbnat.us-east-1.rds.amazonaws.com:3306
-      - WORDPRESS_DB_USER=admin
-      - WORDPRESS_DB_PASSWORD=12345678
-      - WORDPRESS_DB_NAME=mysql
+      - WORDPRESS_DATABASE_HOST=wordpress-instance-1.cobu8fxaskvl.us-east-1.rds.amazonaws.com
+      - WORDPRESS_DATABASE_USER=admin
+      - WORDPRESS_DATABASE_PASSWORD=12345678
+      - WORDPRESS_DATABASE_PORT_NUMBER=3306
+      - WORDPRESS_DATABASE_NAME=mysql
+      - NGINX_HTTP_PORT_NUMBER=8080
+      - NGINX_HTTPS_PORT_NUMBER=443
