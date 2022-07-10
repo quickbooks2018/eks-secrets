@@ -25,3 +25,6 @@ docker run --name wordpress --network wordpress -p 80:8080 -id quickbooks2018/ek
 ```wordpress
 docker compose -p wordpress up -d
 ```
+- Bitnami Nginx Wordpress
+- url https://github.com/bitnami/bitnami-docker-wordpress-nginx
+- url https://github.com/bitnami/bitnami-docker-wordpress-nginx/blob/master/6/debian-11/Dockerfile
