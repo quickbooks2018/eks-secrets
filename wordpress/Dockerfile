@@ -11,7 +11,7 @@ RUN chmod +x /secrets.sh
 
 COPY supervisord.conf /etc/supervisord.conf
 
-RUN chown 1001:1001 /supervisord.log
+RUN > /supervisord.log && chown 1001:1001 /supervisord.log
 
 ## Revert to the original non-root user
 USER 1001
