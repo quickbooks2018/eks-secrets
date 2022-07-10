@@ -7,7 +7,7 @@ RUN install_packages awscli jq supervisor procps
 
 COPY secrets.sh /etc/profile.d/secrets.sh
 
-RUN chmod +x /etc/profile.d/secrets.sh
+RUN chmod +x /etc/profile.d/secrets.sh && chown 1001:1001 /etc/profile.d/secrets.sh
 
 COPY supervisord.conf /etc/supervisord.conf                       # for testing secrets will should be stored in wordpress.txt                 
 
