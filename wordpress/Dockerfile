@@ -11,7 +11,7 @@ RUN chmod +x /secrets.sh
 
 COPY supervisord.conf /etc/supervisord.conf
 
-RUN > /supervisord.log && chown 1001:1001 /supervisord.log && > /wordpress.txt && chown 1001:1001 /wordpress.txt
+RUN > /supervisord.log && chown 1001:1001 /supervisord.log && > /wordpress.txt && chown 1001:1001 /wordpress.txt && > /supervisord.pid && chown 1001:1001 /supervisord.pi
 
 ## Revert to the original non-root user
 USER 1001
