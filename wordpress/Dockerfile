@@ -7,7 +7,7 @@ RUN install_packages awscli jq supervisor procps
 
 COPY secrets.sh /secrets.sh
 
-RUN chmod +x /secrets.sh && chown 1001:1001 /etc/environment
+RUN chmod +x /secrets.sh && chmod r+w 1001:1001 /etc/profile
 
 COPY supervisord.conf /etc/supervisord.conf                       
                                                                             

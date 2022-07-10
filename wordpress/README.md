@@ -33,3 +33,5 @@ docker compose -p wordpress up -d
 - url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
 
 - https://stackoverflow.com/questions/1641477/how-to-set-environment-variable-for-everyone-under-my-linux-system
+
+- https://superuser.com/questions/1308298/setting-variable-in-etc-environment-has-no-effect
