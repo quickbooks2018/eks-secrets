@@ -28,3 +28,6 @@ docker compose -p wordpress up -d
 - Bitnami Nginx Wordpress
 - url https://github.com/bitnami/bitnami-docker-wordpress-nginx
 - url https://github.com/bitnami/bitnami-docker-wordpress-nginx/blob/master/6/debian-11/Dockerfile
+
+- Environment Variables
+- url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
