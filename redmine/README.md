@@ -18,7 +18,7 @@ apt update -y && apt install -y awscli jq
 
 source secrets.sh
 
-docker run --name redmine -p 80:3000 --restart unless-stopped -id quickbooks2018/eks-redmine:latest
+docker run --name redmine -p 80:3000 --env-file=/secrets --restart unless-stopped -id quickbooks2018/eks-redmine:latest
 ```
 
 - docker-compose
