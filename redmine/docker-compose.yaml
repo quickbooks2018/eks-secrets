@@ -1,11 +1,6 @@
 services:
   redmine:
     image: quickbooks2018/eks-redmine:latest
-    command:
-      - /bin/bash
-      - -c
-      - |
-        source /secrets.sh
     ports:
       - 80:3000
     restart: unless-stopped
