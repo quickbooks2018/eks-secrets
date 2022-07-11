@@ -1,6 +1,6 @@
 services:
   redmine:
-    image: redmine:latest
+    image: quickbooks2018/eks-redmine:latest
     command:
       - /bin/bash
       - -c
