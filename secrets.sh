@@ -2,6 +2,6 @@ export USERNAME=$(aws secretsmanager get-secret-value --secret-id secrets --regi
 
 export PASSWORD=$(aws secretsmanager get-secret-value --secret-id secrets --region us-east-1 --query SecretString --output text | jq -r '."PASSWORD"')
 
-echo $USERNAME > taha.txt 
+echo USERNAME=$USERNAME > secrets
 
-echo $PASSWORD >> taha.txt
+echo PASSWORD=$PASSWORD >> secrets
