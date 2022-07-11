@@ -12,7 +12,7 @@ docker build -t quickbooks2018/eks-redmine:latest .
 
 ```
 
-docker run --name phpmyadmin -e PMA_HOST=wordpress-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
+docker run --name phpmyadmin -e PMA_HOST=redmine-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
 
 apt update -y && apt install -y awscli jq
 
@@ -30,7 +30,7 @@ docker compose -p redmine up -d
 
 - My Sql client
 - docker run --name mysql-client -it --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql:5.7 bash
-- mysql -h wordpress-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -u admin -p
+- mysql -h redmine-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -u admin -p
 - show schemas;
 - create schema redmine;
 
