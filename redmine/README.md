@@ -33,6 +33,12 @@ docker compose -p redmine up -d
 
 - url https://hub.docker.com/_/redmine?tab=tags
 
+- My Sql client
+- docker run --name mysql-client -it --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql:5.7 bash
+- mysql -h wordpress-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -u admin -p
+- show schemas;
+- create schema redmine;
+
 - Environment Variables
 - url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
 
