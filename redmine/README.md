@@ -12,7 +12,7 @@ docker build -t quickbooks2018/eks-redmine:latest .
 
 ```
 
-docker run --name phpmyadmin -e PMA_HOST=redmine-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
+docker run --name phpmyadmin -e PMA_HOST=redmine-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
 
 apt update -y && apt install -y awscli jq
 
