@@ -1,8 +1,6 @@
-### Bitnami redmine
+###  Redmine
 
-- Bitnami Docker Compose
-
-- url https://github.com/bitnami/bitnami-docker-redmine/blob/master/docker-compose.yml
+- cloudgeeks.ca
 
 - Docker Build
 
