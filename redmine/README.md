@@ -31,10 +31,12 @@ docker compose -p redmine up -d
 - My Sql client
 ```mysql
 docker run --name mysql-client -it --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql:5.7 bash
-```mysql
+```
+
 ```conecction
 mysql -h redmine-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com -u admin -p
 ```
+
 ```DB
 show schemas;
 create schema redmine;
