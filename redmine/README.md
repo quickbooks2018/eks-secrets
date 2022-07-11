@@ -17,8 +17,6 @@ docker run --name phpmyadmin -e PMA_HOST=wordpress-instance-1.cogke6h6hkax.us-ea
 apt update -y && apt install -y awscli jq
 
 source secrets.sh
-
-docker run --name redmine -p 80:3000 --env-file=/secrets --restart unless-stopped -id quickbooks2018/eks-redmine:latest
 ```
 
 - docker-compose
