@@ -21,7 +21,7 @@ apt update -y && apt install -y awscli jq
 
 source secrets.sh
 
-docker run --name wordpress --env-file=/secrets --network wordpress -p 80:8080 -id quickbooks2018/eks-wordpress:latest
+docker run --name wordpress --env-file=/secrets --network wordpress -p 80:80 -id quickbooks2018/eks-wordpress:latest
 ```
 
 - docker-compose
