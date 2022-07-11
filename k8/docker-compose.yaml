@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    restart: unless-stopped
+    env_file:
+      - /secrets.env                             

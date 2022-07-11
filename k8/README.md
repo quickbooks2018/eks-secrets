@@ -1,20 +1,20 @@
-###  Redmine
+###  nginx
 
 - cloudgeeks.ca
 
 - Docker Build
 
 ```
-docker build -t quickbooks2018/eks-redmine:latest .
+docker build -t quickbooks2018/eks-nginx:latest .
 ```
 
 - Docker Run
 
 ```
 
-docker run --name redmine -p 80:3000 --restart unless-stopped -id quickbooks2018/eks-redmine:latest
+docker run --name nginx -p 80:80 --restart unless-stopped -id quickbooks2018/eks-nginx:latest
 
-docker run --name phpmyadmin -e PMA_HOST=redmine-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
+docker run --name phpmyadmin -e PMA_HOST=nginx-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
 
 apt update -y && apt install -y awscli jq
 
@@ -23,12 +23,12 @@ source secrets.sh
 
 - docker-compose
 
-```redmine
-docker compose -p redmine up -d
+```nginx
+docker compose -p nginx up -d
 ```
-- Docker Hub Redmine
+- Docker Hub nginx
 
-- url https://hub.docker.com/_/redmine?tab=tags
+- url https://hub.docker.com/_/nginx?tab=tags
 
 - My Sql client
 ```mysql
@@ -36,12 +36,12 @@ docker run --name mysql-client -it --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql
 ```
 
 ```conecction
-mysql -h redmine-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -u admin -p
+mysql -h nginx-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -u admin -p
 ```
 
 ```DB
 show schemas;
-create schema redmine;
+create schema nginx;
 ```
 
 - Environment Variables
