@@ -1,0 +1,11 @@
+services:
+  wordpress:
+    image: redmine:latest
+    ports:
+      - 80:3000
+    restart: unless-stopped
+    environment:
+      - REDMINE_SECRET_KEY_BASE=12345678
+      - REDMINE_DB_USERNAME=admin
+      - REDMINE_DB_PASSWORD=12345678
+      - REDMINE_DB_MYSQL=wordpress-instance-1.cogke6h6hkax.us-east-1.rds.amazonaws.com

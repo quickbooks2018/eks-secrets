@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM redmine:latest
 
 RUN apt update -y && apt install -y awscli jq supervisor procps
 
