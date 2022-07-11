@@ -29,9 +29,9 @@ docker run --name redmine --env-file=/secrets --network redmine -p 80:3000 --res
 ```redmine
 docker compose -p redmine up -d
 ```
-- Bitnami Nginx redmine
-- url https://github.com/bitnami/bitnami-docker-redmine-nginx
-- url https://github.com/bitnami/bitnami-docker-redmine-nginx/blob/master/6/debian-11/Dockerfile
+- Docker Hub Redmine
+
+- url https://hub.docker.com/_/redmine?tab=tags
 
 - Environment Variables
 - url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
