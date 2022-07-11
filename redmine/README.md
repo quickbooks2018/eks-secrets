@@ -52,3 +52,6 @@ create schema redmine;
 - https://superuser.com/questions/1308298/setting-variable-in-etc-environment-has-no-effect
 
 - https://stackoverflow.com/questions/65593487/set-env-variables-for-all-the-users-is-not-working-in-docker
+
+- docker compose commands
+- https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands
