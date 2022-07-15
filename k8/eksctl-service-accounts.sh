@@ -19,8 +19,7 @@ else
 fi
 
 export MY_AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
-export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION --output json | jq -r .cluster.resourcesVpcCo
-nfig.vpcId)
+export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION --output json | jq -r .cluster.resourcesVpcConfig.vpcId)
 
 #export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION | awk '{print $5}' | grep -i vpc)
 
