@@ -6,11 +6,23 @@ export CLUSTER_NAME="cloudgeeks-eks-dev"
 export AWS_DEFAULT_REGION="us-east-1"
 export SERVICE_ACCOUNT_NAME="cloudgeeks-secrets"
 export POLICY_NAME="cloudgeeks-secret-dev-policy"
-export NAMESPACE="kube-system"
+export NAMESPACE="asim"
 
+namespaceStatus=$(kubectl get ns $NAMESPACE -o json | jq .status.phase -r)
+
+if [ $namespaceStatus == "Active" ]
+then
+    echo "namespace is present"
+else
+   echo "namespace is not present"
+   kubectl create ns ${NAMESPACE}
+fi
 
 export MY_AWS_ACCOUNT_ID="$(aws sts get-caller-identity --query Account --output text)"
-export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION | awk '{print $5}' | grep -i vpc)
+export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION --output json | jq -r .cluster.resourcesVpcCo
+nfig.vpcId)
+
+#export VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --region $AWS_DEFAULT_REGION | awk '{print $5}' | grep -i vpc)
 
 
 # Download IAM Policy
