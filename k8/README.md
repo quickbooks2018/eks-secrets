@@ -12,7 +12,7 @@ docker build -t quickbooks2018/eks-nginx:latest .
 
 ```
 kubectl create deployment <Deplyment-Name> --image=<Container-Image>
-kubectl create deployment secrets-deployment --image=quickbooks2018/eks-secrets:latest
+kubectl create deployment secrets-deployment --image=quickbooks2018/eks-nginx:latest
 ```
 
 - Docker Run
