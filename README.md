@@ -1,52 +1,64 @@
-## cloudgeeks.ca
+###  nginx
 
-- https://hub.docker.com/repository/docker/quickbooks2018/eks-nginx
-
-- Nginx Container
-
-```nginx
-docker run --name nginx -id nginx:latest
-```
-
-##### Create Secret in Secret Manager
-
-- secrets
-
-- USERNAME=Asim
-- PASSWORD=12345678
+- cloudgeeks.ca
 
 - Docker Build
 
-```build
-docker build -t quickbooks2018/eks-secrets:latest .
+```
+docker build -t quickbooks2018/eks-nginx:latest .
+```
+
+- kubernetes
+
+```
+kubectl create deployment <Deplyment-Name> --image=<Container-Image>
+kubectl create deployment secrets-deployment --image=quickbooks2018/eks-nginx:latest
 ```
 
 - Docker Run
 
-```run
-docker run --name secrets -id quickbooks2018/eks-secrets:latest
-```
-- Docker Remove Running Container
-
-```remove
-docker rm -f secrets
 ```
 
-- Create a Deployment
+docker run --name nginx -p 80:80 --restart unless-stopped -id quickbooks2018/eks-nginx:latest
 
-```
-kubectl create deployment <Deplyment-Name> --image=<Container-Image>
-kubectl create deployment secrets-deployment --image=quickbooks2018/eks-secrets:latest
-```
+docker run --name phpmyadmin -e PMA_HOST=nginx-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -id -p 8080:80 --restart unless-stopped phpmyadmin/phpmyadmin
 
-- Delete Deployment
+apt update -y && apt install -y awscli jq
 
-```
-kubectl delete deployment secrets-deployment
+source secrets.sh
 ```
 
-- Alpine Containers
+- docker-compose
 
-```bash
-apk update && apk add bash
+```nginx
+docker compose -p nginx up -d
 ```
+- Docker Hub nginx
+
+- url https://hub.docker.com/_/nginx?tab=tags
+
+- My Sql client
+```mysql
+docker run --name mysql-client -it --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=true mysql:5.7 bash
+```
+
+```conecction
+mysql -h nginx-instance-1.cqd0k73gk4tn.us-east-1.rds.amazonaws.com -u admin -p
+```
+
+```DB
+show schemas;
+create schema nginx;
+```
+
+- Environment Variables
+- url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
+
+- https://stackoverflow.com/questions/1641477/how-to-set-environment-variable-for-everyone-under-my-linux-system
+
+- https://superuser.com/questions/1308298/setting-variable-in-etc-environment-has-no-effect
+
+- https://stackoverflow.com/questions/65593487/set-env-variables-for-all-the-users-is-not-working-in-docker
+
+- docker compose commands
+- https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands
