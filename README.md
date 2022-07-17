@@ -1,6 +1,6 @@
 ## cloudgeeks.ca
 
-- https://hub.docker.com/_/nginx
+- https://hub.docker.com/repository/docker/quickbooks2018/eks-nginx
 
 - Nginx Container
 
