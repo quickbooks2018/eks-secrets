@@ -52,7 +52,7 @@ create schema nginx;
 ```
 
 - Environment Variables
-- url https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
+- https://unix.stackexchange.com/questions/8342/export-an-env-variable-to-be-available-at-all-sub-shells-and-possible-to-be-mod
 
 - https://stackoverflow.com/questions/1641477/how-to-set-environment-variable-for-everyone-under-my-linux-system
 
@@ -61,4 +61,5 @@ create schema nginx;
 - https://stackoverflow.com/questions/65593487/set-env-variables-for-all-the-users-is-not-working-in-docker
 
 - docker compose commands
+
 - https://stackoverflow.com/questions/30063907/using-docker-compose-how-to-execute-multiple-commands
