@@ -1,11 +1,13 @@
 #!/bin/bash
 set -x
 
+###########
 # Update Me
+###########
 export CLUSTER_NAME="cloudgeeks-eks-dev"
 export AWS_DEFAULT_REGION="us-east-1"
 export SERVICE_ACCOUNT_NAME="cloudgeeks-secrets"
-export POLICY_NAME="cloudgeeks-secret-dev-policy"
+export POLICY_NAME="cloudgeeks-secrets-dev-policy"
 export NAMESPACE="asim"
 
 namespaceStatus=$(kubectl get ns $NAMESPACE -o json | jq .status.phase -r)
